@@ -1,0 +1,51 @@
+{
+  "name": "react-userscripts",
+  "version": "1.1.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mui/material": "^6.1.0",
+    "@nextui-org/react": "^2.4.7",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "framer-motion": "^11.5.4",
+    "react": "^18.3.1",
+    "react-app-rewired": "^2.2.1",
+    "react-dom": "^18.3.1",
+    "react-scripts": "^5.0.1"
+  },
+  "scripts": {
+    "start": "cross-env PORT=3000 BROWSER=none FAST_REFRESH=false WDS_SOCKET_HOST=localhost react-app-rewired start",
+    "build": "npm run build:preload && react-app-rewired build && npm run build:finalize",
+    "build:preload": "node src/build/preload",
+    "build:finalize": "node src/build/finalize",
+    "debug-build": "react-app-rewired --inspect-brk=5858 build && npm run build:finalize",
+    "test": "react-app-rewired test",
+    "eject": "react-app-rewired eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "cross-env": "^7.0.3",
+    "fs-extra": "^11.2.0",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.11",
+    "typescript": "^5.6.2"
+  },
+  "packageManager": "yarn@4.4.0+sha512.91d93b445d9284e7ed52931369bc89a663414e5582d00eea45c67ddc459a2582919eece27c412d6ffd1bd0793ff35399381cb229326b961798ce4f4cc60ddfdb"
+}

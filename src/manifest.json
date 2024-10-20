@@ -1,0 +1,17 @@
+{
+  "manifest_version": 4,
+  "type": "extension",
+  "name": "ChangeMsgFontsize",
+  "slug": "change_message_fontsize",
+  "description": "更改NTQQ消息文本大小",
+  "version": "0.1.2",
+  "authors": [
+    {
+      "name": "Anonymouse"
+    }
+  ],
+  "platform": ["win32", "linux", "darwin"],
+  "injects": {
+    "renderer": "./renderer.js"
+  }
+}
